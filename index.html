@@ -1,16 +1,26 @@
 <html>
 <head>
-
+<style>
+    .form-group {
+        width: 30vw;
+    }
+</style>
 </head>
 <body>
-    <label for="encodedString">Encoded Path</label><br />
-    <input type="text" id="encodedString" value="AAAhPIAACf" style="width: 30vw">
+    <div class="form-group">
+        <label for="encodedString">Encoded Path</label><br />
+        <input type="text" id="encodedString" value="AAAhPIAACf" style="width: 30vw">
+    </div>
     <br />
     <br />
     <button id="decodePathButton">Decode Path</button>
     <br />
     <br />
-    <label for="decodedString">Decoded Path</label><br />
+    <div class="form-group">
+        <label for="decodedString">Decoded Path</label>
+        <span id="closePathWarning" style="color: red; float: right"></span>
+    </div>
+    <br />
     <textarea id="decodedString" style="width: 30vw; height: 50vh"></textarea>
     <br />
     <br />

@@ -37,7 +37,7 @@ var EncodePath = (function(){
 	p._x = 0;
 	p._y = 0;
 	p.code = '';
-	
+	//this._activeInstructions.length ? this.append(new G.ClosePath()) : this;
 	p.moveTo = function( x, y) {
 		
 		if(Math.abs(x)<=MAX_CHAR2 && Math.abs(y)<=MAX_CHAR2){
@@ -51,7 +51,6 @@ var EncodePath = (function(){
 		
 		return this;
 	}
-	
 	p.lineTo = function( x, y) {
 		var numChars, encodeNum;
 		
@@ -119,7 +118,12 @@ var EncodePath = (function(){
 		
 		return this;
 	}
-	
+	p.closePath = function() {
+		var numChars = 0;
+		this.code += encodeMethod(4, numChars);
+		return this;
+	}
+
 	p.clear = function() {
 		this.code = '';
 		this._x = this._y = 0;

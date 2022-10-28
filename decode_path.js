@@ -41,9 +41,17 @@ function decodePath() {
         console.log(f);
         console.log(params);
         // TODO: Fix closePath so that it works
-        if( f !== 'closePath') {
+        //if( f !== 'closePath') {
+        if( params.length == 2)
             document.getElementById('decodedString').value += f + "(" + params[0] + "," + params[1] + ")\n";        
-        }
+        else if( params.length == 3 )
+            document.getElementById('decodedString').value += f + "(" + params[0] + "," + params[1] + "," + params[2] + ")\n";        
+        else if( params.length == 4 )
+            document.getElementById('decodedString').value += f + "(" + params[0] + "," + params[1] + "," + params[2] + "," + params[3] + ")\n";        
+        else
+            document.getElementById('decodedString').value += f + "()";
+        //} else document.getElementById('closePathWarning').innerHTML = "closePath Removed with value " + f + "(" + params[0] + "," + params[1] + ")";        
+        
     }
     return this;
 };
@@ -56,7 +64,11 @@ function encodeDecodedString() {
     lines = originalList.split('\n');
     var newList = "";
     for( var idx=0; idx < lines.length; idx++ ) {
-        //lines[idx] = lines[idx].replace("\r", "");
+        /*
+        if( lines[idx].indexOf("undefined")) {
+            lines[idx] = lines[idx].replace("undefined,undefined", "");
+        }
+        */
         if( lines[idx].length )
             newList += "." + lines[idx];
     }

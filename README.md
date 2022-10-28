@@ -12,4 +12,4 @@ plus allows you to edit and then re-encode using this
 nifty encoder written by Brett Johnson found here
 https://gist.github.com/bjnsn/3440359
 
-Note - closePath currently not supported and removed from the decoded path
+with added closedPath functionality
