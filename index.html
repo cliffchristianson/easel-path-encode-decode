@@ -1,0 +1,33 @@
+<html>
+<head>
+
+</head>
+<body>
+    <label for="encodedString">Encoded Path</label><br />
+    <input type="text" id="encodedString" value="AAAhPIAACf" style="width: 30vw">
+    <br />
+    <br />
+    <button id="decodePathButton">Decode Path</button>
+    <br />
+    <br />
+    <label for="decodedString">Decoded Path</label><br />
+    <textarea id="decodedString" style="width: 30vw; height: 50vh"></textarea>
+    <br />
+    <br />
+    <button id="encodeDecodedButton">Encode Decoded</button>
+    <br />
+    <br />
+    <label for="encodeDecodedString">Encode Decoded Path</label><br />
+    <input type="text" id="encodeDecodedString" value="" style="width: 30vw">
+    
+    
+    <script  src="./encode_path.js"></script>
+    <script  src="./decode_path.js"></script>
+    <script>
+    var ep = new EncodePath();
+    ep.moveTo(-150, 0);
+    console.log(ep);
+
+</script>
+</body>
+</html>
