@@ -13,7 +13,6 @@ lineTo(47.50000000000001,-49.900000000000006)
 quadraticCurveTo(57.50000000000001,-49.900000000000006)
 lineTo(57.50000000000001,40)
 quadraticCurveTo(57.50000000000001,50)
-closePath(undefined,undefined)
 
 plus allows you to edit and then re-encode using this 
 nifty encoder written by Brett Johnson found here
